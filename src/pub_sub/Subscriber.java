@@ -12,6 +12,8 @@ import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
 
 import java.util.Arrays;
 
+import javax.swing.JOptionPane;
+
 public class Subscriber {
 	
 	//variaveis de configuração do pubnub
@@ -19,15 +21,33 @@ public class Subscriber {
     final String SubKey = "sub-c-55c41470-ead1-11e9-bdee-36080f78eb20";	
     final String channelName = "divulgacao";
     PubNub pubnub;
+    PNConfiguration config;
     
     public Subscriber() {
-        PNConfiguration config = new PNConfiguration();
-        //config.setFilterExpression("Temperatura > 50");
+        config = new PNConfiguration();
         config.setSubscribeKey(SubKey);
         pubnub = new PubNub(config);
     }    
     
-    public void subscribe() {
+    public void subscribe(String tipo_residencia, String municipio, String valorMinimo) {
+    	//Filtros
+        if(!tipo_residencia.equals("null")) {
+        	System.out.println("tipo_residencia");
+        	config.setFilterExpression("tipo_residencia == " + tipo_residencia);
+        }
+        if(!municipio.equals("null")) {
+        	config.setFilterExpression("municipio == " + municipio);
+       }
+       if(!valorMinimo.equals("null")) {
+        	config.setFilterExpression("valor_minimo >= " + valorMinimo);        	
+       }
+        
+		String mensagem =  
+				"Tipo Residência = " + tipo_residencia + "\n" +
+				"Município: " + municipio  + "\n" +
+				"Valor: " + valorMinimo;
+		System.out.println(mensagem);	    	
+    	
         try {
             pubnub.addListener(new SubscribeCallback() {
                 @Override
@@ -47,7 +67,28 @@ public class Subscriber {
 
                 @Override
                 public void message(PubNub pubnub, PNMessageResult message) {
-                    System.out.println(message.getMessage());
+                    
+
+                    String mensagemRecebida = message.getMessage().toString();
+                    
+                    System.out.println("sfafssaf: " + mensagemRecebida);
+                    
+                    //split na mensagem recebida.
+                    //indice 0 -> tipo residencia
+                    //indice 1 -> municipio
+                    //indice 2 -> valor
+                    //indice 3 -> mensagem
+                    String arrayMensagem[] = mensagemRecebida.split("@");
+                    //formata mensagem para exibição
+                    mensagemRecebida = "Tipo Residência: " + arrayMensagem[0] + "\n" +
+                    				   "Município: " + arrayMensagem[1] + "\n" +
+                    				   "Valor: " + arrayMensagem[2] + "\n" +
+                    				   "Mensagem: " + arrayMensagem[3] + "\n";
+                    
+                    //exibe mensagem
+            		JOptionPane.showMessageDialog(null, mensagemRecebida ,"Divulgação",
+            				JOptionPane.INFORMATION_MESSAGE);	
+                    
                 }
 
                 @Override
