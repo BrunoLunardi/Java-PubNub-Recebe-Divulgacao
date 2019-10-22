@@ -22,16 +22,13 @@ public class Home extends JFrame {
 	FIltroDAO filtroDAO;
 	Subscriber sub = new Subscriber();
 	
-	//Altera fitro
-	public void setFiltro(String tipo_residencia, String municipio, String valorMinimo) {
-		sub.subscribe(tipo_residencia, municipio, valorMinimo);
-	}
+
 	/**
 	 * Create the frame.
 	 */
 	public Home() {
 		//inicia subscribe para receber filtros
-		setFiltro("null", "null", "null");
+		sub.subscribe("null", "null", "null", "null");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -79,18 +76,6 @@ public class Home extends JFrame {
 		
 //////////////////////////////////Fim Botão Cadastrar Filtro/////////////////////////////		
 		
-//////////////////////////////////Botão Remover Filtro/////////////////////////////		
-		// Configurações do botão para chamar a tela de cadastrar tópics		
-		JButton btnNewButton = new JButton("Remover Filtro");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-			}
-		});
-		btnNewButton.setBounds(126, 138, 230, 25);
-		contentPane.add(btnNewButton);
-//////////////////////////////////Fim Botão Remover Filtro/////////////////////////////			
-		
 //////////////////////////////////Botão Filtrar/////////////////////////////		
 //Configurações do botão para chamar a tela de mensagem
 		JButton buttonFiltrar = new JButton("Filtrar");
@@ -99,18 +84,20 @@ public class Home extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 
 				if(jcMunicipio.getSelectedItem().equals("Sem Filtro")) {
-					sub = null;
-					sub = new Subscriber();
-					sub.subscribe("null", "null", "null");										
+//					sub = null;
+//					sub = new Subscriber();
+					sub.subscribe("null", "null", "null", "null");										
 				}else {
 					try {
 						FiltroDTO filtroSelecionadoDTO = new FiltroDTO();
 						
 						String filtro = (String) jcMunicipio.getSelectedItem();
 						filtroSelecionadoDTO = filtroDAO.dadosFiltro(filtro);
-					
+//						sub = null;
+//						sub = new Subscriber();					
 						sub.subscribe(filtroSelecionadoDTO.getTipo_residencia(), 
 								filtroSelecionadoDTO.getMunicipio(),
+								filtroSelecionadoDTO.getUf(),
 								filtroSelecionadoDTO.getValor_minimo());
 						
 						System.out.println(filtroSelecionadoDTO.getNome_filtro());
@@ -123,7 +110,7 @@ public class Home extends JFrame {
 			}
 		});
 
-		buttonFiltrar.setBounds(126, 188, 230, 25);
+		buttonFiltrar.setBounds(126, 138, 230, 25);
 		contentPane.add(buttonFiltrar);		
 
 //////////////////////////////////Fim Botão Filtrar/////////////////////////////		

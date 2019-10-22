@@ -22,7 +22,7 @@ public class FIltroDAO {
 			// código sql a ser executado
 			// o ? será trocado, em tempo de execução, pelo valor a ser inserido no BD
 			String sql = "INSERT INTO filtro (nome_filtro, municipio, tipo_residencia, "
-					+ "valor_minimo) VALUES (?, ?, ?, ?)";
+					+ "valor_minimo, uf) VALUES (?, ?, ?, ?, ?)";
 			// realiza uma ponte entre o java e o BD
 			PreparedStatement statement = connection.prepareStatement(sql);
 			// faz a alteração do ? da variavel sql para o valor a ser passado para o insert
@@ -33,6 +33,7 @@ public class FIltroDAO {
 			statement.setString(2, filtroDTO.getMunicipio());
 			statement.setString(3, filtroDTO.getTipo_residencia());
 			statement.setString(4, filtroDTO.getValor_minimo());
+			statement.setString(5, filtroDTO.getUf());
 			// Executar o comando sql com os devidos valores
 			statement.execute();
 			// fechar conexao com bd
@@ -70,6 +71,7 @@ public class FIltroDAO {
             	filtro.setMunicipio(rs.getString("municipio"));
             	filtro.setTipo_residencia(rs.getString("tipo_residencia"));
             	filtro.setValor_minimo(rs.getString("valor_minimo"));
+            	filtro.setUf(rs.getString("uf"));
             	
             	//adiciona o municipio na lista de municipios
             	listaFiltro.add(filtro);
@@ -115,6 +117,7 @@ public class FIltroDAO {
             	filtro.setMunicipio(rs.getString("municipio"));
             	filtro.setTipo_residencia(rs.getString("tipo_residencia"));
             	filtro.setValor_minimo(rs.getString("valor_minimo"));
+            	filtro.setUf(rs.getString("uf"));
             }
 
         } catch (SQLException ex) {

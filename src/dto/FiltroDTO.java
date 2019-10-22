@@ -3,13 +3,15 @@ package dto;
 public class FiltroDTO {
 	
 	int id;
-	String nome_filtro, municipio, tipo_residencia, valor_minimo;
+	String nome_filtro, municipio, tipo_residencia, valor_minimo, uf;
 	
-	public FiltroDTO(String nome_filtro, String municipio, String tipo_residencia, String valor_minimo) {
+	public FiltroDTO(String nome_filtro, String municipio, String tipo_residencia, 
+			String uf, String valor_minimo) {
 		this.nome_filtro = nome_filtro;
 		this.municipio = municipio;
 		this.tipo_residencia = tipo_residencia;
 		this.valor_minimo = valor_minimo;
+		this.uf = uf;
 	}
 	
 	public FiltroDTO() {
@@ -46,6 +48,12 @@ public class FiltroDTO {
 	}
 	public void setValor_minimo(String valor_minimo) {
 		this.valor_minimo = valor_minimo;
+	}
+	public String getUf() {
+		return uf;
+	}
+	public void setUf(String uf) {
+		this.uf = uf;
 	}
 
 	@Override
