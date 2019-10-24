@@ -100,7 +100,11 @@ public class Home extends JFrame {
 								filtroSelecionadoDTO.getUf(),
 								filtroSelecionadoDTO.getValor_minimo());
 						
-						System.out.println(filtroSelecionadoDTO.getNome_filtro());
+						System.out.println(filtroSelecionadoDTO.getTipo_residencia()
+								+ "\n" + filtroSelecionadoDTO.getMunicipio() 
+								+ "\n" + filtroSelecionadoDTO.getUf()
+								+ "\n" + filtroSelecionadoDTO.getValor_minimo()
+								);
 						
 					}catch(Exception error) {
 						System.out.println("Erro"+ error);

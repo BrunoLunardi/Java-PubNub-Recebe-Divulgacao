@@ -27,41 +27,55 @@ public class Subscriber {
 		config = new PNConfiguration();
 		config.setSubscribeKey(SubKey);
 		pubnub = new PubNub(config);
-		
-		System.out.println("Construtor");
 	}
 
 	public void subscribe(String tipo_residencia, String municipio, String uf, String valorMinimo) {
-		System.out.println("Filtros: " + tipo_residencia + " " + municipio + " " +
-				uf + " " + valorMinimo);
+		int i = 0;
+		String filtro="";
 		// Filtros
 		if (!tipo_residencia.equals("null")) {
-			System.out.println("Filtro: " + tipo_residencia);
-			config.setFilterExpression("tipo_residencia == " + tipo_residencia);
-		}else {
-			config.setFilterExpression("tipo_residencia == *");
+			if(i == 1) {
+				filtro = filtro + " && tipo_residencia == " + "'" + tipo_residencia + "'";
+			}else {
+				filtro = "tipo_residencia == " + "'" + tipo_residencia + "'";
+				i = 1;
+			}
 		}
 		if (!municipio.equals("null")) {
-			config.setFilterExpression("municipio == " + municipio);
-		}else {
-			config.setFilterExpression("municipio == *");
+				if(i == 1) {
+					filtro = filtro + " && municipio == " + "'" + municipio + "'";
+				}else {
+					filtro = "municipio == " + "'" + municipio + "'";
+					i = 1;
+				}		
 		}
 		if (!uf.equals("null")) {
-			config.setFilterExpression("uf == " + uf);
-		}else {
-			config.setFilterExpression("uf == *");
+			if(i == 1) {
+				filtro = filtro + " && uf == " + "'" + uf + "'";
+			}else {
+				filtro = "uf == " + "'" + uf + "'";
+				i = 1;
+			}		
 		}
 		if (!valorMinimo.equals("null")) {
-			config.setFilterExpression("valor_minimo >= " + valorMinimo);
-		}else {
-			config.setFilterExpression("valor_minimo >= 0");
+			if(i == 1) {
+				filtro = filtro + " && valor_minimo >= " +  valorMinimo;
+			}else {
+				filtro = "valor_minimo >= " + valorMinimo;
+				i = 1;
+			}		
 		}
-
-		String mensagem = "Tipo Residência = " + tipo_residencia + "\n" 
-				+ "Município: " + municipio + "\n"
-				+ "Uf: " + uf + "\n"
-				+ "Valor: " + valorMinimo;
-		System.out.println(mensagem);
+		
+		config.setFilterExpression(filtro);
+//		config.setFilterExpression("tipo_residencia == 'casa' && municipio == 'AÃ§ailÃ¢ndia' && uf == 'AC' && valor_minimo >= 100");
+		System.out.println("Filtro string: " + filtro);
+		System.out.println("Filtro get: " + config.getFilterExpression());
+//
+//		String mensagem = "Tipo Residência = " + tipo_residencia + "\n" 
+//				+ "Município: " + municipio + "\n"
+//				+ "Uf: " + uf + "\n"
+//				+ "Valor: " + valorMinimo;
+//		System.out.println(mensagem);
 
 		try {
 			pubnub.addListener(new SubscribeCallback() {
