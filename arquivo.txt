@@ -1,0 +1,399 @@
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: Acari
+UF: AP
+Valor: 555555555555555555555555555
+Mensagem: teste sem filtro"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: Acari
+UF: AP
+Valor: 555555555555555555555555555
+Mensagem: teste sem filtro"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 500
+Mensagem: teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: AÃ§ucena
+UF: AM
+Valor: 555
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: AÃ§ucena
+UF: AM
+Valor: 555
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 15000
+Mensagem: Teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 15000
+Mensagem: Teste"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 15000
+Mensagem: teste2"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: SÃ£o Bernardino
+UF: SC
+Valor: 15000
+Mensagem: teste2"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: Abadia de Goiás
+UF: null
+Valor: 1500000
+Mensagem: Teste casa1"
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 60000000
+Mensagem: fsfafdafa"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 60000000
+Mensagem: fsfafdafa"
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: Abadia dos Dourados
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: Abadia dos Dourados
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 50000000
+Mensagem: Teste SJC casa"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 50000000
+Mensagem: Teste SJC casa"
+/////////////////////////////

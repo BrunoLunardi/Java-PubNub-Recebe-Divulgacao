@@ -33,7 +33,7 @@ public class MunicipioDAO {
 
         try {
         	
-			String sql = "SELECT * FROM Municipio ORDER BY Nome";
+			String sql = "SELECT DISTINCT Nome FROM Municipio ORDER BY Nome";
 			// realiza uma ponte entre o java e o BD
 			statement = connection.prepareStatement(sql);        	
         	
@@ -45,10 +45,10 @@ public class MunicipioDAO {
             	MunicipioDTO municipio = new MunicipioDTO();
             		
             	//recupera valores de acordo com as colunas do BD
-            	municipio.setId(rs.getInt("Id"));
-            	municipio.setCodigo(rs.getInt("Codigo"));
+//            	municipio.setId(rs.getInt("Id"));
+//            	municipio.setCodigo(rs.getInt("Codigo"));
             	municipio.setNome(rs.getString("Nome"));
-            	municipio.setUf(rs.getString("Uf"));
+//            	municipio.setUf(rs.getString("Uf"));
             	//adiciona o municipio na lista de municipios
             	municipios.add(municipio);
             }

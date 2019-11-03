@@ -9,7 +9,18 @@ import com.pubnub.api.callbacks.SubscribeCallback;
 import com.pubnub.api.enums.PNStatusCategory;
 import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
 import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
+import com.pubnub.api.models.consumer.pubsub.PNSignalResult;
+import com.pubnub.api.models.consumer.pubsub.message_actions.PNMessageActionResult;
+import com.pubnub.api.models.consumer.pubsub.objects.PNMembershipResult;
+import com.pubnub.api.models.consumer.pubsub.objects.PNSpaceResult;
+import com.pubnub.api.models.consumer.pubsub.objects.PNUserResult;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.Arrays;
 
 import javax.swing.JOptionPane;
@@ -30,6 +41,7 @@ public class Subscriber {
 	}
 
 	public void subscribe(String tipo_residencia, String municipio, String uf, String valorMinimo) {
+		config.setFilterExpression("null");
 		int i = 0;
 		String filtro="";
 		// Filtros
@@ -70,12 +82,6 @@ public class Subscriber {
 //		config.setFilterExpression("tipo_residencia == 'casa' && municipio == 'AÃ§ailÃ¢ndia' && uf == 'AC' && valor_minimo >= 100");
 		System.out.println("Filtro string: " + filtro);
 		System.out.println("Filtro get: " + config.getFilterExpression());
-//
-//		String mensagem = "Tipo Residência = " + tipo_residencia + "\n" 
-//				+ "Município: " + municipio + "\n"
-//				+ "Uf: " + uf + "\n"
-//				+ "Valor: " + valorMinimo;
-//		System.out.println(mensagem);
 
 		try {
 			pubnub.addListener(new SubscribeCallback() {
@@ -95,7 +101,6 @@ public class Subscriber {
 
 				@Override
 				public void message(PubNub pubnub, PNMessageResult message) {
-
 					String mensagemRecebida = message.getMessage().toString();
 
 					System.out.println("sfafssaf: " + mensagemRecebida);
@@ -107,20 +112,63 @@ public class Subscriber {
 					// indice 3 -> mensagem
 					String arrayMensagem[] = mensagemRecebida.split("@");
 					// formata mensagem para exibição
-					mensagemRecebida = arrayMensagem[0] 
+					mensagemRecebida = 
+							
+							"\n" + arrayMensagem[0] 
 							+ "\n" + arrayMensagem[1]
 							+ "\n" + arrayMensagem[2]
 							+ "\n" + arrayMensagem[3] 
 							+ "\n" + arrayMensagem[4];
-
+					
+					String serializarMensagem = 
+							mensagemRecebida 
+							+ "\n" + "/////////////////////////////";
+					try {
+						serializar(serializarMensagem);
+					}catch(Exception e) {
+						System.out.println("Erro ao serializar arquivo");
+					}
+					
 					// exibe mensagem
 					JOptionPane.showMessageDialog(null, mensagemRecebida, "Divulgação",
 							JOptionPane.INFORMATION_MESSAGE);
+					
+					pubnub.unsubscribe();
 
 				}
 
 				@Override
 				public void presence(PubNub pubnub, PNPresenceEventResult presence) {
+				}
+
+				@Override
+				public void signal(PubNub pubnub, PNSignalResult pnSignalResult) {
+					// TODO Auto-generated method stub
+					
+				}
+
+				@Override
+				public void user(PubNub pubnub, PNUserResult pnUserResult) {
+					// TODO Auto-generated method stub
+					
+				}
+
+				@Override
+				public void space(PubNub pubnub, PNSpaceResult pnSpaceResult) {
+					// TODO Auto-generated method stub
+					
+				}
+
+				@Override
+				public void membership(PubNub pubnub, PNMembershipResult pnMembershipResult) {
+					// TODO Auto-generated method stub
+					
+				}
+
+				@Override
+				public void messageAction(PubNub pubnub, PNMessageActionResult pnMessageActionResult) {
+					// TODO Auto-generated method stub
+					
 				}
 			});
 			pubnub.subscribe().channels(Arrays.asList(channelName)).execute();
@@ -128,5 +176,18 @@ public class Subscriber {
 			System.out.println("Erro no Subscribe");
 		}
 	}
+	
+    public void serializar(String mensagem) throws Exception {
+            File arquivo = new File("arquivo.txt");
+            try {
+                FileWriter grava = new FileWriter(arquivo, true);
+                PrintWriter escreve = new PrintWriter(grava);
+                escreve.println(mensagem);
+                escreve.close();
+                grava.close();
+            } catch (IOException ex) {
+                System.out.println("Erro de arquivo");
+            }
+    }	
 
 }

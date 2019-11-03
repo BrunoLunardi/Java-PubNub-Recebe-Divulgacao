@@ -64,6 +64,7 @@ public class Home extends JFrame {
 		JButton button = new JButton("Cadastrar Filtro");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				sub = null;
 				//chama tela de cadastrar topicos
 				CadastrarFiltro frame = new CadastrarFiltro();
 				frame.setVisible(true);
@@ -118,7 +119,24 @@ public class Home extends JFrame {
 		contentPane.add(buttonFiltrar);		
 
 //////////////////////////////////Fim Botão Filtrar/////////////////////////////		
+//////////////////////////////////Botão Cadastrar Filtro/////////////////////////////		
+		//Configurações do botão para chamar a tela de mensagem
+		JButton buttonVerMensagens = new JButton("Ver Mensagens");
+		buttonVerMensagens.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//chama tela de cadastrar topicos
+				VerMensagens frame = new VerMensagens();
+				frame.setVisible(true);
+				//fecha esta tela para deixar só a de cadastrar topicos aberta
+				dispose();
+			}
+		});
 		
+		buttonVerMensagens.setBounds(126, 188, 230, 25);
+		contentPane.add(buttonVerMensagens);		
+
+//////////////////////////////////Fim Botão Cadastrar Filtro/////////////////////////////		
 	}
 
 	
