@@ -397,3 +397,157 @@ UF: null
 Valor: 50000000
 Mensagem: Teste SJC casa"
 /////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: Abadia dos Dourados
+UF: MG
+Valor: 500000
+Mensagem: Teste MG"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: Abadia dos Dourados
+UF: MG
+Valor: 500000
+Mensagem: Teste MG"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: null
+UF: null
+Valor: 0
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: Abadia de Goiás
+UF: BA
+Valor: 200000
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: null
+Município: Abadia de Goiás
+UF: BA
+Valor: 200000
+Mensagem: "
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 500000
+Mensagem: Casa em SJC Vila Industrial"
+/////////////////////////////
+
+"Tipo Residência: casa
+Município: São José dos Campos
+UF: null
+Valor: 500000
+Mensagem: Casa em SJC Vila Industrial"
+/////////////////////////////

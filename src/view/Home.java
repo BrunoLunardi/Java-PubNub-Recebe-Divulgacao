@@ -20,13 +20,14 @@ public class Home extends JFrame {
 
 	private JPanel contentPane;
 	FIltroDAO filtroDAO;
-	Subscriber sub = new Subscriber();
+	Subscriber sub;
 	
 
 	/**
 	 * Create the frame.
 	 */
 	public Home() {
+		sub = new Subscriber();
 		//inicia subscribe para receber filtros
 		sub.subscribe("null", "null", "null", "null");
 		
